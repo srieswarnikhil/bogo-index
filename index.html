@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+    <title>BOGO Offer</title>
+</head>
+<body>
+    <div class="offer-container">
+        <div class="offer-header">
+		<hr class="line-width">
+		<span class="line-content-width">YAY! It's BOGO</span>
+		<hr class="line-width">
+		</div>
+
+        <div class="offer-option">
+            <div class="offer-option-1">
+				<div class="offer-option-2">
+					<label>
+					<input type="radio" name="offer" value="1" data-units="1">
+					<strong>1 Unit</strong> <span class="offer-sec">10% Off</span>
+				</label>
+				<p class="standard-price">Standard Price</p>
+				</div>
+				<div class="offer-option-2">
+					<p class="actual-amount-2">$10.00 USD </p>
+					<strike class="actual-amount">$24.00 USD</strike>
+				</div>
+			</div>
+			
+			<div class="offer-details" id="details-1">
+			<div class="first-part">
+				<div class="second-part">
+						<p class="serial">  <br></p>
+						<p class="serial">#1</p>
+						<p class="serial">#2</p>
+					
+				</div>
+				<div class="second-part">
+					<span class="size-text">Size</span>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+				</div>
+				<div class="second-part">
+					<span class="size-text">Colour</span>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+				</div>
+			</div>
+		</div>
+			
+        </div>
+
+
+		<div class="offer-option">
+		<div class="badge offer-option-1">MOST POPULAR</div>
+            <div class="offer-option-1 ">
+				<div class="offer-option-2">
+					<label>
+					<input type="radio" name="offer" value="2" data-units="2">
+					<strong>2 Unit</strong> <span class="offer-sec">20% Off</span>
+				</label>
+				</div>
+				<div class="offer-option-2">
+					<p class="actual-amount-2">$18.00 USD </p>
+					<strike class="actual-amount">$24.00 USD</strike>
+				</div>
+			</div>
+			<div class="offer-details" id="details-2">
+			<div class="first-part">
+				<div class="second-part">
+						<p class="serial">  <br></p>
+						<p class="serial">#1</p>
+						<p class="serial">#2</p>
+					
+				</div>
+				<div class="second-part">
+					<span class="size-text">Size</span>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+				</div>
+				<div class="second-part">
+					<span class="size-text">Colour</span>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+				</div>
+			</div>
+		</div>	
+        </div>
+
+
+        <div class="offer-option">
+            <div class="offer-option-1">
+				<div class="offer-option-2">
+					<label>
+					<input type="radio" name="offer" value="3" data-units="3">
+					<strong>3 Unit</strong> <span class="offer-sec">30% Off</span>
+				</label>
+
+				</div>
+				<div class="offer-option-2">
+					<p class="actual-amount-2">$24.00 USD </p>
+					<strike class="actual-amount">$24.00 USD</strike>
+				</div>
+				
+			</div>
+			
+			<div class="offer-details" id="details-3">
+			<div class="first-part">
+				<div class="second-part">
+						<p class="serial">  <br></p>
+						<p class="serial">#1</p>
+						<p class="serial">#2</p>
+					
+				</div>
+				<div class="second-part">
+					<span class="size-text">Size</span>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+					<select id="size1">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+				</div>
+				<div class="second-part">
+					<span class="size-text">Colour</span>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+					<select id="color2">
+                        <option>Black</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                    </select>
+				</div>
+			</div>
+		</div>
+			
+        </div>
+
+        <div class="free-delivery">
+			<span class='text-one'>Free Delivery</span>
+			<span class='text-two'>Total:$18.00USD</span>
+		</div>
+
+        <button class="add-to-cart">+ Add to Cart</button>
+
+        <div class="footer">@ Powered by Pumper</div>
+    </div>
+	
+	<script>
+        document.querySelectorAll('input[name="offer"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                const selectedUnits = this.getAttribute('data-units');
+
+                // Hide all details
+                document.querySelectorAll('.offer-details').forEach(details => {
+                    details.classList.remove('active');
+                });
+
+                // Show details for the selected unit
+                const selectedDetails = document.getElementById(`details-${selectedUnits}`);
+                if (selectedDetails) {
+                    selectedDetails.classList.add('active');
+                }
+
+            });
+        });
+    </script>
+	
+</body>
+</html>
